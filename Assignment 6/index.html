@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>My Grid Experiment</title>
    <link rel="stylesheet" href="style.css">
-   <title>Home | Vajello Library</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
 </head>
 
 <body>
-   <div class="wrapper">
-      <header class="header">
-         <div class="top-row">
-            <div class="logo"><img class="logo" src="vajelloLibraryLogoLong.png" alt="The Valjello Library Logo"></div>
-            <div class="search-bar">
-               <input type="text" placeholder="Search">
-               <button>Search</button>
+   <div class="container">
+      <header>
+         <div class="top-bar">
+            <img class="logo1" src="vajelloLibraryLogoLong.png" alt="The Valjello Library Logo">
+            <div class="search">
+               <input class="search-input" type="text" placeholder=" ">
+               <button class="search-button">SEARCH
+               </button>
             </div>
-            <div class="user">
-               <button>Login</button>
+            <div class="login">
+               <button class="login">Login
+               </button>
             </div>
          </div>
          <nav>
-            <a class="about-nav" href="#about">About</a>
-            <div class="dropdown1">
+            <a class="about" href="#about">About</a>
+            <div class="dropdown">
                <button class="dropbtn">Library Services</button>
                <div class="dropdown-content">
                   <a href="#fiction">Get Library Card</a>
@@ -32,7 +36,7 @@
                   <a href="#children">Reserve a Book</a>
                </div>
             </div>
-            <div class="dropdown2">
+            <div class="dropdown">
                <button class="dropbtn">News & Event</button>
                <div class="dropdown-content">
                   <a href="#fiction">News</a>
@@ -41,20 +45,29 @@
             </div>
          </nav>
       </header>
-      <article class="main">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione modi incidunt eaque optio sequi, dolorum,
-            eveniet repudiandae debitis dolor animi vero? Culpa veniam dolorum similique eligendi aliquam, voluptatibus
-            perspiciatis ut?</p>
-      </article>
-      <aside class="aside1">
-         <h1>Aside 1</h1>
-      </aside>
-      <aside class="aside2">
-         <h1>Aside 2</h1>
-      </aside>
-      <footer class="footer">
-         <h1>Footer</h1>
-      </footer>
+      <div class="sidebar-left"></div>
+      <main>
+         <img class="main-library-img" src="library.jpg">
+         <div class="welcome">
+            <h2>Welcome to the</h2>
+            <h1>Vallejo Library</h1>
+         </div>
+         <div class="main-buttons">
+            <button class="book-catalog">Book Catalog</button>
+            <button class="reserve-a-book">Reserve a Book</button>
+            <button class="get-library-card">Get a Library Card</button>
+         </div>
+         <div class="latest-news">
+            <h3>Latest News</h3>
+            <div class="news"></div>
+         </div>
+         <div class="latest-events">
+            <h3>Latest Events</h3>
+            <div class="events"></div>
+         </div>
+      </main>
+      <div class="sidebar-right"></div>
+      <footer></footer>
    </div>
 </body>
 
