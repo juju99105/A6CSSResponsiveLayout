@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
-   <title>My Grid Experiment</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home | The Vallejo Library</title>
    <link rel="stylesheet" href="style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,59 +16,114 @@
    <div class="container">
       <header>
          <div class="top-bar">
-            <img class="logo1" src="vajelloLibraryLogoLong.png" alt="The Valjello Library Logo">
-            <div class="search">
-               <input class="search-input" type="text" placeholder=" ">
-               <button class="search-button">SEARCH
-               </button>
-            </div>
-            <div class="login">
-               <button class="login">Login
-               </button>
-            </div>
+            <figure>
+               <img class="logo1" src="vajelloLibraryLogoLong.png" alt="The Valjello Library Logo">
+            </figure>
+            <form class="search" action="#" method="get">
+               <input class="search-input" type="text" placeholder="Search...">
+               <button class="search-button" type="submit">SEARCH</button>
+            </form>
+            <button class="login">Login</button>
          </div>
          <nav>
-            <a class="about" href="#about">About</a>
-            <div class="dropdown">
-               <button class="dropbtn">Library Services</button>
-               <div class="dropdown-content">
-                  <a href="#fiction">Get Library Card</a>
-                  <a href="#non-fiction">Book Catalog</a>
-                  <a href="#children">Reserve a Book</a>
-               </div>
-            </div>
-            <div class="dropdown">
-               <button class="dropbtn">News & Event</button>
-               <div class="dropdown-content">
-                  <a href="#fiction">News</a>
-                  <a href="#non-fiction">Event</a>
-               </div>
-            </div>
+            <ul>
+               <li><a class="about" href="#about">ABOUT</a></li>
+               <li>
+                  <button class="dropbtn">LIBRARY SERVICES</button>
+                  <div class="dropdown-content">
+                     <a href="#get-library-card">Get a Library Card</a>
+                     <a href="#book-catalog">Book Catalog</a>
+                     <a href="#reserve-book">Reserve a Book</a>
+                  </div>
+               </li>
+               <li>
+                  <button class="dropbtn">NEWS & EVENTS</button>
+                  <div class="dropdown-content">
+                     <a href="#news">News</a>
+                     <a href="#events">Events</a>
+                  </div>
+               </li>
+            </ul>
          </nav>
       </header>
-      <div class="sidebar-left"></div>
+      <aside class="sidebar-left"></aside>
       <main>
-         <img class="main-library-img" src="library.jpg">
-         <div class="welcome">
+         <figure>
+            <img class="main-library-img" src="library.jpg" alt="Vallejo Library">
+         </figure>
+         <section class="welcome">
             <h2>Welcome to the</h2>
             <h1>Vallejo Library</h1>
-         </div>
-         <div class="main-buttons">
+         </section>
+         <section class="main-buttons">
             <button class="book-catalog">Book Catalog</button>
             <button class="reserve-a-book">Reserve a Book</button>
             <button class="get-library-card">Get a Library Card</button>
-         </div>
-         <div class="latest-news">
-            <h3>Latest News</h3>
-            <div class="news"></div>
-         </div>
-         <div class="latest-events">
-            <h3>Latest Events</h3>
-            <div class="events"></div>
-         </div>
+         </section>
+         <section class="newsevents">
+            <article class="latest-news">
+               <h3>Latest News</h3>
+               <div class="news"></div>
+            </article>
+            <article class="latest-events">
+               <h3>Latest Events</h3>
+               <div class="events"></div>
+            </article>
+         </section>
       </main>
-      <div class="sidebar-right"></div>
-      <footer></footer>
+      <aside class="sidebar-right"></aside>
+      <footer>
+         <section class="quick-info">
+            <h4>THE VALLEJO LIBRARY</h4>
+            <p>1821 Vallejo Street</p>
+            <p>Vallejo City, 98712</p>
+            <h5>OPENING HOURS</h5>
+            <div class="opening-hours">
+               <ul class="days">
+                  <li>Monday</li>
+                  <li>Tuesday</li>
+                  <li>Wednesday</li>
+                  <li>Thursday</li>
+                  <li>Friday</li>
+                  <li>Saturday</li>
+                  <li>Sunday</li>
+               </ul>
+               <ul class="hours">
+                  <li>9:00 am - 5:30pm</li>
+                  <li>9:00 am - 6:00pm</li>
+                  <li>9:00 am - 6:00pm</li>
+                  <li>9:00 am - 6:00pm</li>
+                  <li>9:00 am - 6:00pm</li>
+                  <li>9:00 am - 5:30pm</li>
+                  <li>Closed</li>
+               </ul>
+            </div>
+         </section>
+         <section class="quick-links">
+            <h4>QUICK LINKS</h4>
+            <ul>
+               <li><a href="about">About Us</a></li>
+               <li><a href="book-catalog">Book Catalog</a></li>
+               <li><a href="reserve-a-book">Reserve a Book</a></li>
+               <li><a href="get-library-card">Get a Library Card</a></li>
+               <li><a href="latest-news">Latest News</a></li>
+               <li><a href="current-events">Current Events</a></li>
+            </ul>
+         </section>
+         <section class="contact">
+            <h4>CONTACT</h4>
+            <p>Phone: 510-456-9890</p>
+            <p>Email: <a href="mailto:contact@thevallejolibrary.com">contact@thevallejolibrary.com</a></p>
+            <div class="social-media">
+               <h4>Follow Us</h4>
+               <div class="social-media-icons">
+                  <img class="facebook" src="facebook.png" alt="Facebook">
+                  <img class="twitter" src="twitter.png" alt="Twitter">
+                  <img class="instagram" src="instagram.png" alt="Instagram">
+               </div>
+            </div>
+         </section>
+      </footer>
    </div>
 </body>
 
