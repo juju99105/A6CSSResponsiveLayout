@@ -36,9 +36,6 @@ header {
    padding-right: 11rem;
 }
 
-figure {
-   margin: 0;
-}
 
 .logo1 {
    width: 25rem;
@@ -101,7 +98,6 @@ nav {
    background-color: #143C75;
    /* display: flex;
    justify-content: space-evenly; */
-   /* Example background color */
 }
 
 nav ul {
@@ -110,18 +106,15 @@ nav ul {
    padding: 0;
    display: flex;
    justify-content: space-evenly;
-   /* This will evenly space out the list items */
    align-items: center;
 }
 
 nav ul li {
    position: relative;
-   /* Needed for absolute positioning of dropdown */
 }
 
 .dropbtn {
    background-color: #143C75;
-   /* Example button color */
    color: white;
    padding: 10px;
    border: none;
@@ -139,7 +132,6 @@ nav ul li {
 
 .about {
    background-color: #143C75;
-   /* Example button color */
    color: white;
    padding: 10px;
    border: none;
@@ -189,7 +181,7 @@ main {
    background-color: white;
    overflow: hidden;
    grid-template-columns: 4.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+   grid-template-rows: 0.2fr 0.6fr 0.6fr 1fr 0.2fr;
    display: grid;
 
 }
@@ -199,6 +191,23 @@ figure {
    grid-column-end: 2;
    grid-row-start: 2;
    grid-row-end: 5;
+   margin: 0;
+}
+
+figcaption {
+   font-size: 1rem;
+   font-weight: 300;
+   margin-top: -1.9rem;
+   margin-left: 0.3rem;
+   margin-bottom: 0;
+   font-family: "Open Sans", sans-serif;
+   z-index: 1;
+   /* position: absolute; */
+}
+
+figcaption a {
+   text-decoration: none;
+   color: white;
 }
 
 .main-library-img {
@@ -235,15 +244,35 @@ figure {
    margin-bottom: 0rem;
 }
 
+/* ------------- main buttons ------------- */
+
 .main-buttons {
    grid-column-start: 2;
    grid-column-end: 8;
    grid-row-start: 3;
    grid-row-end: 4;
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-between;
    align-items: center;
+   margin-left: 6rem;
 }
+
+.link-button {
+   font-family: "Open Sans", sans-serif;
+   font-size: 2rem;
+   display: inline-block;
+   padding: 10px 15px;
+   text-align: center;
+   text-decoration: none;
+   color: #555;
+   background-color: #f0f0f0;
+   border: none;
+   cursor: pointer;
+   font-size: 17px;
+   margin: 10px;
+}
+
+/* ------------- news and events ------------- */
 
 .newsevents {
    grid-column-start: 2;
@@ -251,9 +280,38 @@ figure {
    grid-row-start: 4;
    grid-row-end: 5;
    display: flex;
-   justify-content: space-evenly;
-   align-items: center;
+   justify-content: space-between;
+   align-items: end;
+   margin-left: 6rem;
+   font-family: "Open Sans", sans-serif;
 }
+
+.newsevents .latest-news h3,
+.newsevents .latest-events h3 {
+   font-size: 1.5rem;
+   font-weight: 600;
+   margin-bottom: 0.5rem;
+}
+
+.latest-news,
+.latest-events {
+   display: grid;
+   align-items: end;
+}
+
+div.news,
+div.events {
+   justify-content: space-evenly;
+   position: relative;
+   font-weight: 600;
+   height: 25rem;
+   width: 25rem;
+   max-width: 25rem;
+   border: 1px solid #555;
+   background-color: white;
+}
+
+/* ------------- footer ------------- */
 
 footer {
    grid-column-start: 1;
@@ -363,7 +421,12 @@ ul.hours {
 .contact p {
    font-size: 1rem;
    margin-top: 0;
-   margin-bottom: 0.5rem;
+   margin-bottom: 1rem;
+}
+
+.contact p a {
+   text-decoration: none;
+   color: white;
 }
 
 .social-media h4 {
@@ -390,3 +453,19 @@ ul.hours {
    grid-row-end: 3;
    background-color: white;
 }
+
+/* ------------- media queries ------------- */
+/* 
+@media only screen and (max-width: 1760px) {
+   main {
+      background-color: red;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 4;
+   }
+
+   /* .sidebar-left,
+   .sidebar-right {
+      display: none;
+   } */
