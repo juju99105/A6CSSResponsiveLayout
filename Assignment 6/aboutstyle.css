@@ -192,18 +192,113 @@ main {
    grid-row-end: 3;
    background-color: white;
    overflow: hidden;
-   grid-template-columns: 4.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: 0.2fr 0.6fr 0.6fr 1fr 0.2fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto auto auto;
    display: grid;
 
 }
 
-figure {
+.mission {
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 2;
+   display: block;
+   font-size: 1.1rem;
+   font-family: "Open Sans", sans-serif;
+   font-weight: 600;
+   margin-left: 6rem;
+   margin-top: 12rem;
+}
+
+.kid-reading {
+   grid-column-start: 2;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 2;
+   display: block;
+   /* justify-content: center; */
+   /* align-items: center; */
+   margin-right: 6rem;
+   overflow: hidden;
+   width: 60rem;
+   height: 40rem;
+   margin-top: 6rem;
+}
+
+.kid-reading img {
+   width: 100%;
+   height: auto;
+}
+
+.history {
+   grid-column-start: 2;
+   grid-column-end: 4;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   display: block;
+   font-size: 1.1rem;
+   font-family: "Open Sans", sans-serif;
+   font-weight: 600;
+   margin-right: 6rem;
+   margin-top: 12rem;
+}
+
+.vallejo-scenery {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 2;
-   grid-row-end: 5;
-   margin: 0;
+   grid-row-end: 3;
+   display: block;
+   /* justify-content: center; */
+   /* align-items: center; */
+   margin-left: 6rem;
+   overflow: hidden;
+   width: 25rem;
+   height: 40rem;
+   margin-top: 6rem;
+}
+
+.vallejo-scenery-img {
+   width: auto;
+   height: 100%;
+   margin-left: -65%;
+}
+
+.director-message {
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 3;
+   grid-row-end: 4;
+   display: block;
+   font-size: 1.1rem;
+   font-family: "Open Sans", sans-serif;
+   font-weight: 600;
+   margin-left: 6rem;
+   margin-top: 12rem;
+   margin-bottom: 6rem;
+}
+
+.director {
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 3;
+   grid-row-end: 4;
+   display: block;
+   /* justify-content: center; */
+   /* align-items: center; */
+   margin-right: 6rem;
+   overflow: hidden;
+   width: 25rem;
+   height: 40rem;
+   margin-top: 6rem;
+   margin-bottom: 6rem;
+}
+
+.director-img {
+   width: auto;
+   height: 100%;
+   margin-left: -75%;
 }
 
 figcaption {
@@ -222,53 +317,7 @@ figcaption a {
    color: white;
 }
 
-.main-library-img {
-   max-width: 50rem;
-   height: auto;
-   width: 100%;
-}
-
-.welcome {
-   grid-column-start: 2;
-   grid-column-end: 8;
-   grid-row-start: 2;
-   grid-row-end: 3;
-   display: block;
-   justify-content: center;
-   align-items: center;
-   font-size: 2rem;
-   font-family: "Open Sans", sans-serif;
-   font-weight: 600;
-   margin-left: 6rem;
-}
-
-.welcome h1 {
-   font-size: 6rem;
-   font-weight: 700;
-   margin-bottom: 1rem;
-   margin-top: 0rem;
-   color: #242424;
-}
-
-.welcome h2 {
-   font-size: 1.5rem;
-   font-weight: 400;
-   margin-top: 0;
-   margin-bottom: 0rem;
-}
-
 /* ------------- main buttons ------------- */
-
-.main-buttons {
-   grid-column-start: 2;
-   grid-column-end: 8;
-   grid-row-start: 3;
-   grid-row-end: 4;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-left: 6rem;
-}
 
 .link-button {
    font-family: "Open Sans", sans-serif;
@@ -285,97 +334,6 @@ figcaption a {
    margin: 10px;
    text-transform: uppercase;
    font-weight: 700;
-}
-
-/* ------------- news and events ------------- */
-
-.newsevents {
-   grid-column-start: 2;
-   grid-column-end: 8;
-   grid-row-start: 4;
-   grid-row-end: 5;
-   display: flex;
-   justify-content: space-between;
-   align-items: end;
-   margin-left: 6rem;
-   font-family: "Open Sans", sans-serif;
-}
-
-.newsevents .latest-news h3,
-.newsevents .latest-events h3 {
-   font-size: 1.5rem;
-   font-weight: 600;
-   margin-bottom: 0rem;
-   margin-top: 0rem;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
-   padding-left: 1rem;
-   color: #143C75;
-   border: 2px solid #DBEBFC;
-}
-
-.newsevents .latest-news h3 a,
-.newsevents .latest-events h3 a {
-   text-decoration: none;
-   color: #143C75;
-}
-
-.latest-news,
-.latest-events {
-   display: grid;
-   align-items: end;
-}
-
-div.news,
-div.events {
-   justify-content: space-evenly;
-   display: block;
-   position: relative;
-   font-weight: 600;
-   height: 20vw;
-   width: 20vw;
-   max-width: 25rem;
-   /* border: 1px solid #555; */
-   background-color: white;
-   overflow-y: scroll;
-   /* cursor: pointer; */
-}
-
-.events {
-   display: block;
-}
-
-.news {
-   display: block;
-}
-
-.news article {
-   display: block;
-   padding: 1rem;
-   margin: 0;
-   font-size: 1rem;
-   font-weight: 400;
-   text-decoration: none;
-   color: #143C75;
-   background-color: #DBEBFC;
-}
-
-.events article {
-   display: block;
-   padding: 1rem;
-   margin: 0;
-   font-size: 1rem;
-   font-weight: 400;
-   text-decoration: none;
-   color: #143C75;
-   background-color: #DBEBFC;
-}
-
-.events article a,
-.news article a {
-   text-decoration: none;
-   font-weight: 650;
-   color: #143C75;
 }
 
 /* ------------- footer ------------- */
@@ -522,58 +480,16 @@ ul.hours {
 }
 
 /* ------------- media queries ------------- */
-
-@media only screen and (max-width: 1657px) {
-   .welcome h1 {
-      font-size: 5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      margin-top: 0rem;
-   }
-}
-
-@media only screen and (max-width: 1412px) {
-   .welcome h1 {
-      font-size: 3.7rem;
-      font-weight: 700;
-      margin-bottom: 0rem;
-      margin-top: 0rem;
+@media only screen and (max-width: 1440px) {
+   .director {
+      grid-column-start: 2;
+      grid-column-end: 4;
    }
 
-   .newsevents .latest-news h3,
-   .newsevents .latest-events h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0rem;
-      margin-top: 0rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      padding-left: 1rem;
-      color: #143C75;
-      border: 2px solid #DBEBFC;
-   }
-}
+   .director-message {
+      grid-column-start: 1;
+      grid-column-end: 2;
 
-
-@media only screen and (max-width: 1408px) {
-   .welcome h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      margin-top: 0rem;
-   }
-
-   .newsevents .latest-news h3,
-   .newsevents .latest-events h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 0rem;
-      margin-top: 0rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      padding-left: 1rem;
-      color: #143C75;
-      border: 2px solid #DBEBFC;
    }
 }
 
@@ -581,6 +497,7 @@ ul.hours {
 @media only screen and (max-width: 1024px) {
    .container {
       width: 1245px;
+      overflow: hidden;
    }
 
    .top-bar {
@@ -590,18 +507,44 @@ ul.hours {
       padding-bottom: 2rem;
    }
 
-   .welcome h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      margin-top: 0rem;
+   .mission {
+      margin-top: 4rem;
    }
 
-   div.news,
-   div.events {
-      height: 21vw;
-      width: 23vw;
-      /* max-width: 20rem; */
+   .kid-reading {
+      margin-top: 2rem;
+      width: 25rem;
+      height: auto;
+      overflow: hidden;
+   }
+
+   .history {
+      margin-top: 2rem;
+      margin-left: 2.3rem;
+   }
+
+   .vallejo-scenery {
+      margin-top: 2rem;
+      width: 25rem;
+      height: auto;
+   }
+
+   .vallejo-scenery-img {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+   }
+
+   .director {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      margin-top: 4rem;
+      margin-right: -40rem;
+   }
+
+   .director-message {
+      grid-column-start: 1;
+      grid-column-end: 2;
    }
 
    footer {
@@ -727,83 +670,89 @@ ul.hours {
 
    main {
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto auto;
    }
 
-   .welcome {
+   .mission {
       grid-row-start: 1;
       grid-row-end: 2;
       grid-column-start: 1;
       grid-column-end: 2;
-      margin-top: 6rem;
-   }
-
-   .welcome h2 {
-      font-size: 3rem;
-      text-align: center;
-   }
-
-   .welcome h1 {
-      font-size: 5rem;
-      text-align: center;
-   }
-
-   .main-img {
+      margin-left: 0rem;
+      margin-top: 0rem;
       margin-top: 3rem;
+      font-size: 3rem;
+   }
+
+   .kid-reading {
       grid-row-start: 2;
       grid-row-end: 3;
       grid-column-start: 1;
       grid-column-end: 2;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      display: grid;
+      margin-right: 0rem;
+      margin-top: 0rem;
+      width: 100%;
+      height: auto;
+      margin-top: 3rem;
    }
 
-
-   .main-buttons {
+   .history {
       grid-row-start: 3;
       grid-row-end: 4;
       grid-column-start: 1;
       grid-column-end: 2;
-      display: grid;
+      margin-right: 0rem;
       margin-top: 3rem;
-      justify-content: center;
-   }
-
-   .main-buttons a {
       font-size: 3rem;
-      padding: 2rem;
    }
 
-   .newsevents {
+   .vallejo-scenery {
       grid-row-start: 4;
       grid-row-end: 5;
       grid-column-start: 1;
       grid-column-end: 2;
-      display: grid;
+      margin-left: 0rem;
+      margin-top: 0rem;
+      width: 100%;
+      height: auto;
+      margin-top: 3rem;
+   }
+
+   .vallejo-scenery-img {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+   }
+
+   .director-message {
+      grid-row-start: 6;
+      grid-row-end: 7;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      margin-left: 0rem;
+      margin-top: 0rem;
+      margin-top: 3rem;
+      font-size: 3rem;
+   }
+
+   .director {
+      grid-row-start: 5;
+      grid-row-end: 6;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      align-content: center;
+      justify-content: center;
+      margin: 0rem;
+      margin-left: 20rem;
+      margin-top: 3rem;
+   }
+
+   .director-img {
+      align-content: center;
+      align-items: center;
       justify-content: center;
    }
 
-   .newsevents .latest-news h3,
-   .newsevents .latest-events h3 {
-      font-size: 3rem;
-      padding: 2rem;
-      text-align: center;
-      width: 50rem;
-      display: none;
-   }
-
-   .news article,
-   .events article {
-      width: 50rem;
-      display: none;
-   }
-
-   .sidebar-left,
-   .sidebar-right {
-      display: none;
-   }
 
    footer {
       grid-template-columns: 1fr;
